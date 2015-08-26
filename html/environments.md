@@ -14,7 +14,8 @@ Windows/Macどちらともおすすめは[Atom](https://atom.io/)です。ここ
 
 まず https://atom.io/ にアクセスしてください。【Download For Mac】をクリックしてインストーラーをダウンロードしてください。
 
-![スクリーンショット_2015-08-26_16_51_52.png](https://idcf-developers.qiita.com/files/3faa007e-fc20-86c5-7b70-26197fdeffb3.png "スクリーンショット_2015-08-26_16_51_52.png")
+
+
 
 ダウンロードが完了したら、そのファイルを開いてください。開くとFinderが開いて「`Atom.app`」が表示されます(`.app`は表示されていないかもしれません)。
 
