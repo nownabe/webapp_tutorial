@@ -37,5 +37,10 @@ Windows/Macどちらともおすすめは[Atom](https://atom.io/)です。ここ
 
 まずはコマンドを入力するためのソフトを起動します。Windowsなら「コマンドプロンプト」、Macなら「ターミナル」といいます。今後、この資料ではどちらの場合も「ターミナル」と呼ぶことにします。
 
+### Windowsでフォルダを作る
+* Ctrl+Rでcmd
+* mkdir %HOME%\lestudy\html
 
-
+### Macでフォルダを作る
+* Finderでターミナル
+* mkdir ~/lestudy/html
