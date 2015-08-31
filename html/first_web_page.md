@@ -2,9 +2,12 @@
 ===================
 
 ## 概要
-HTMLファイルを作成して、ブラウザで表示させてみます。
-まず`index.html`というHTMLファイルを作成します。
-次に`profile.html`を作成して`index.html`からのリンクを作成します。
+HTMLファイルを作成してブラウザで表示させてみます。
+
+* `index.html`というHTMLファイルを作成する
+* `profile.html`を作成する
+* `index.html`から`profile.html`へリンクを作成する
+* `profile.html`から`index.html`へリンクを作成する
 
 ## index.htmlを作る
 まずは`index.html`を作成しましょう。
@@ -63,5 +66,43 @@ Finderで`lestudy/html`フォルダをみると、中に`index.html`ができて
 ![](スクリーンショット_2015-08-31_16_28_50.png)
 
 ## profile.htmlを作る
+次は`profile.html`を作成しましょう。
+AtomのFileメニューから「New File」をクリックして、新しくファイルを作成します。
 
-## ブラウザで表示する
+次のHTMLを適当に編集して`index.html`と同じように勉強会用フォルダ(`lestudy/html`)に`profile.html`として保存してください。
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>自己紹介</title>
+  </head>
+  <body>
+    <h1>自己紹介</h1>
+    
+    <section>
+      <h2>なまえ</h2>
+      <p>なまえはほげほげです。</p>
+    </section>
+    
+    <section>
+      <h2>しゅみ</h2>
+      <p>しゅみはもげもげです。</p>
+    </section>
+    
+    <section>
+      <h2>とくぎ</h2>
+      <p>とくぎはふがふがです。</p>
+    </section>
+  </body>
+</html>
+```
+
+保存できたら`index.html`と同じように`profile.html`をダブルクリックして開いてみてください。
+
+## リンクさせる
+最後に`index.html`と`profile.html`を互いにリンクさせてみましょう。
+まずは`index.html`から`profile.html`へのリンクを作成します。
+
+先ほど作成した`index.html`を開いてください。
