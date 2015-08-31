@@ -16,7 +16,7 @@ Windows/Macどちらともおすすめは[Atom](https://atom.io/)です。ここ
 
 まず https://atom.io/ にアクセスしてください。【Download For Mac】をクリックしてインストーラーをダウンロードしてください。
 
-![Atom](./3faa007e-fc20-86c5-7b70-26197fdeffb3.png)
+
 
 ダウンロードが完了したら、そのファイルを開いてください。開くとFinderが開いて「`Atom.app`」が表示されます(`.app`は表示されていないかもしれません)。
 
@@ -44,6 +44,10 @@ Windows/Macどちらともおすすめは[Atom](https://atom.io/)です。ここ
 * mkdir %HOME%\lestudy\html
 
 ### Macでフォルダを作る
+まずFinderを開いてください。FinderはDockにあると思います。
+
+![](スクリーンショット 2015-08-31 10.09.56.png)
+
 * Finderでターミナル
 * mkdir ~/lestudy/html
 
