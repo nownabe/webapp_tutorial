@@ -106,3 +106,77 @@ AtomのFileメニューから「New File」をクリックして、新しくフ�
 まずは`index.html`から`profile.html`へのリンクを作成します。
 
 先ほど作成した`index.html`を開いてください。
+Atomだと左のツリーメニューや上部のタブから`index.html`をクリックすればOKです。
+
+![](スクリーンショット_2015-08-31_17_00_28.png)
+
+タブなどで`index.html`が表示されていない場合はFileメニューの「Open」から`index.html`を開いてください。
+
+開いた`index.html`を次のように編集してください。
+`<section>〜</section>`が追加されています。
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>はじめてのWebページ</title>
+  </head>
+  <body>
+    <h1>はじめてのWebページ</h1>
+    <p>はじめてのWebページです！わーい</p>
+    
+    <section>
+      <h2>メニュー</h2>
+      <ul>
+        <li><a href="./profile.html">自己紹介</a></li>
+      </ul>
+    </section>
+  </body>
+</html>
+```
+
+編集が終わったら保存してください。既に作成されているファイルを編集した場合は、ファイルメニューの「Save as」ではなく「Save」をクリックします。
+
+保存できたらもう一度ブラウザで`index.html`を開いてください。リンクが追加されていると思います。このリンクをクリックして`profile.html`が表示されることを確認してください。これがWebページを結びつけるハイパーリンクという機能です。
+
+次に`profile.html`から`index.html`に戻れるようにリンクを作成します。
+`profile.html`をエディタで開いて次のように編集してください。
+`<footer>〜</footer>`が追加されています。
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>自己紹介</title>
+  </head>
+  <body>
+    <h1>自己紹介</h1>
+
+    <section>
+      <h2>なまえ</h2>
+      <p>なまえはほげほげです。</p>
+    </section>
+
+    <section>
+      <h2>しゅみ</h2>
+      <p>しゅみはもげもげです。</p>
+    </section>
+
+    <section>
+      <h2>とくぎ</h2>
+      <p>とくぎはふがふがです。</p>
+    </section>
+    
+    <footer>
+      <p><a href="./index.html">戻る</a></p>
+    </footer>
+  </body>
+</html>
+```
+
+同じようにブラウザで表示させてみてください。
+`index.html`と`profile.html`を行き来できるようになっていれば成功です！
+
+WebサイトはこのようにWebページを互いにリンクさせて構築していきます。
