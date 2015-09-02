@@ -1,6 +1,6 @@
 * [HTML5/CSS3でWebサイトを作る](html/README.md)
-  * [環境準備](html/environments)
-  * [Webの復習](html/web)
+  * [環境準備](html/environments.md)
+  * [Webの復習](html/web.md)
   * [はじめてのWebページ](html/first_web_page.md)
   * [HTML5の基礎](html/basis_of_html5.md)
   * [HTML文書の構造](html/structure_of_html.md)
