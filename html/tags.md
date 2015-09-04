@@ -127,11 +127,172 @@ HTMLはあくまでも文書の構造を表現する言語なので文書の構�
 ```
 
 ## a要素
+リンクをはります。
+ブラウザで`a`要素の内容をクリックすると違うページに移動できるようになります。
 
-## ul, ol, li要素
+リンク先は`href`属性で指定します。
+
+```html
+<a href="./profile.html">自己紹介</a>
+```
+
+`.`は相対URLという書き方です。
+相対URLではリンク先のURLをリンク元のファイルからの相対的なパスで指定します。
+対照的に絶対的なURLで表す絶対URLというものもあります。
+
+絶対URLでは次のように普通にURLを書きます。
+
+```html
+<a href="https://www.google.co.jp">Google</a>
+```
+
+相対パスではそのファイルからみて同じフォルダ階層を「`.`」、一つ上の階層を「`..`」で表し、フォルダの区切りを「`/`」で表します。
+
+```
+html
+├── index.html
+├── profile.html
+└── programings
+    ├── javascript.html
+    └── ruby.html
+```
+
+例えば上のようなフォルダ構成の場合、`profile.html`から`index.html`にリンクをはる場合は、
+
+```html
+<a href="./index.html">戻る</a>
+```
+
+とします。`javascript.html`にリンクをはるには、
+
+```html
+<a href="./programings/javascript.html">JavaScript</a>
+```
+
+とします。`javascript.html`から`profile.html`へリンクをはるにはひとつ上の階層になるので
+
+```html
+<a href="../profile.html">自己紹介へもどる</a>
+```
+
+とします。`javascript.html`から`ruby.html`は同じ階層なので
+
+```html
+<a href="./ruby.html">Ruby</a>
+```
+
+とします。
+
+## ol, ul, li要素
+箇条書きを表現する要素です。
+
+`ol`要素は順序付きリスト(ordered list)、`ul`要素は順序なしリスト(unordered list)です。
+`li`要素はリストのひとつひとつの項目(list item)です。
+
+次のようにして使います。
+
+順序ありリスト:
+
+```html
+<ol>
+  <li>HTML5/CSS3</li>
+  <li>SQL</li>
+  <li>Ruby</li>
+  <li>Sinatra</li>
+</ol>
+```
+
+表示例:
+
+> 1. HTML5/CSS3
+> 2. SQL
+> 3. Ruby
+> 4. Sinatra
+
+順序なしリスト:
+
+```html
+<ul>
+  <li>JavaScript</li>
+  <li>Ruby</li>
+</ul>
+```
+
+表示例:
+
+> * JavaScript
+> * Ruby
 
 ## b, i, em, strong要素
+テキストの意味を表す要素です。
+
+* `b`要素: 文書のキーワードや製品名など他と区別したいテキストを表す
+* `i`要素: 技術単語や外来語など他と区別したいテキストを表す
+* `em`要素: 強調したいテキストを表す
+* `strong`要素: 重要なテキストを表す
+
+> ```html
+> <p>
+>   どの実装が生き残るか、さらにもう一段階<i>パラダイムシフト</i>が
+>   あるのか？っていう懸念はありますが、僕は
+>   <em>
+>     間違いなく<strong>仮想DOM</strong>が次世代の<b>フロントエンド環境</b>のスタンダードになる
+>   </em>
+>   と思っています。
+> <p>
+> ```
 
 ## img要素
+文書に画像を埋め込むための要素です。`src`属性で画像ファイルの絶対URLか相対URLを指定します。
+
+```html
+<img src="./mypicture.jpg">
+<img src="http://k.yimg.jp/images/top/sp2/cmn/logo-ns-131205.png">
+```
+
 
 ## table要素
+表を定義する要素です。
+`table`要素で表全体を囲みます。
+`tr`要素で表の行を表します。
+`td`要素で表の各セルを表します。
+
+見出しには`th`を使います。
+
+```html
+<table>
+  <tr>
+    <th>国名</th>
+    <th>首都</ht>
+    <th>国旗</th>
+  </tr>
+  <tr>
+    <td>日本</td>
+    <td>東京都</td>
+    <td><img src="http://tamenal.com/wp-content/uploads/2015/07/356ca5e02c1fe8688d29743aaa46a317.jpeg" width="141" height="89"></td>
+  </tr>
+  <tr>
+    <td>アメリカ合衆国</td>
+    <td>ワシントンD.C.</td>
+    <td><img src="http://bookclub.japantimes.co.jp/userimg/image/No_41-Q2-2.jpg" width="122" height="88"></td>
+  </tr>
+</table>
+```
+
+<table>
+  <tr>
+    <th>国</th>
+    <th>首都</ht>
+    <th>国旗</th>
+  </tr>
+  <tr>
+    <td>日本</td>
+    <td>東京都</td>
+    <td><img src="http://tamenal.com/wp-content/uploads/2015/07/356ca5e02c1fe8688d29743aaa46a317.jpeg" width="141" height="89"></td>
+  </tr>
+  <tr>
+    <td>アメリカ合衆国</td>
+    <td>ワシントンD.C.</td>
+    <td><img src="http://bookclub.japantimes.co.jp/userimg/image/No_41-Q2-2.jpg" width="122" height="88"></td>
+  </tr>
+</table>
