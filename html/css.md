@@ -315,3 +315,28 @@ flexボックスは次のようにして使います。
 flexボックスは最近注目されている技術なので是非flexボックスを使ってレイアウトしてみてください。
 
 ## さまざまなプロパティ
+これまで紹介したプロパティ以外にも様々なプロパティがあるので一部を紹介します。
+詳しくはリファレンスをみてください。
+
+* http://www.htmq.com/style/index.shtml
+* http://www.htmq.com/css3/index.shtml
+
+また、色の名前は[色見本](http://hogehoge.tk/webdev/color/)を参照してください。
+
+### background-colorプロパティ
+背景色を指定します。
+
+```css
+section#hobby {
+  background-color: black;
+}
+```
+
+### background-imageプロパティ
+背景画像を設定します。
+
+```css
+body {
+  background-image: url("./background.jpg");
+}
+```
