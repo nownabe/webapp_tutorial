@@ -156,6 +156,125 @@ CSSではドットではなくシャープ`#`をつけます。
 そのため、要素の意味を表す名前をつけるようにしてください。
 
 ## スタイルの継承
+CSSのスタイルは親要素から子要素へ継承されます。
+例えば次のようなHTMLとCSSがあった場合、`section#hobby`要素の子要素である`h2`要素と`p`要素にもスタイルが引き継がれて文字が赤くなります。
 
+```html
+<h1>自己紹介</h1>
+<section id="hobby">
+  <h2>趣味</h2>
+  <p>読書とプログラミング</p>
+</section>
+
+<section id="skill">
+  <h2>特技</h2>
+  <p>さらまわし</p>
+</section>
+```
+
+```css
+section#hobby { color: red; }
+```
+
+![](スクリーンショット 2015-09-04 15.32.52.png)
+
+継承は子要素からさらにその子の孫要素にも引き継がれます。
 
 ## ボックス
+ブラウザはHTMLのそれぞれの要素をボックスとしてレンダリングしています。
+
+`style.css`を次のようにしてみてください。
+保存してブラウザで確認するとボックスの様子が確認できます。
+(`*`はユニバーサルセレクタといってすべての要素に適用されます)
+
+```css
+* { border: 1px solid blue; }
+```
+
+CSSではボックスを駆使してレイアウトしていくことになります。
+例えば次のようなHTML/CSSでボックスにスタイルを適用してみます。
+
+```html
+<h1>自己紹介</h1>
+
+<section id="name">
+  <h2>なまえ</h2>
+  <p>なまえはほげほげです。</p>
+</section>
+
+<section id="hobby">
+  <h2>しゅみ</h2>
+  <p>しゅみはもげもげです。</p>
+</section>
+
+<section id="skill">
+  <h2>とくぎ</h2>
+  <p>とくぎはふがふがです。</p>
+</section>
+
+<footer>
+  <p><a href="./index.html">戻る</a></p>
+</footer>
+```
+
+```css
+section {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#name  { background-color: lightblue }
+#hobby { background-color: lightgreen }
+#skill { background-color: khaki }
+```
+
+結果はこんな感じです。
+
+![](スクリーンショット 2015-09-04 16.02.48.png)
+
+ボックスは次の図のように、`width`、`height`、`margin`、`padding`、`border`などのプロパティでスタイルを定義することができます。下の図は上のHTMLの例です。
+
+![](スクリーンショット 2015-09-04 16.15.52.png)
+
+## flexボックス
+flexボックスを使うと簡単にレスポンシブなレイアウトを実現することができます。
+実際にやってみましょう。
+
+`profile.html`を開いて、すべての`section`要素を`section#content`で囲んでください。
+
+```html
+<div id="content">
+  <section id="name">
+    <h2>なまえ</h2>
+    <p>なまえはほげほげです。</p>
+  </section>
+
+  <section id="hobby">
+    <h2>しゅみ</h2>
+    <p>しゅみはもげもげです。</p>
+  </section>
+
+  <section id="skill">
+    <h2>とくぎ</h2>
+    <p>とくぎはふがふがです。</p>
+  </section>
+</div>
+```
+
+`div`はひとかたまりな範囲を表す汎用的な要素です。
+
+次に、`style.css`を次のように編集してください。
+
+```css
+#content { display: flex; }
+
+section {
+  flex: 0.5 0.5 300px;
+  margin: 10px;
+  border: 1px solid black;
+  background-color: lightgrey;
+}
+```
+
+## さまざまなプロパティ
