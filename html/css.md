@@ -264,17 +264,54 @@ flexボックスを使うと簡単にレスポンシブなレイアウトを実�
 
 `div`はひとかたまりな範囲を表す汎用的な要素です。
 
-次に、`style.css`を次のように編集してください。
+次に、`style.css`を開いてください。
+Chrome, Firefox, IEの方は次のようにしてください。
+(IEはIE10移行なら対応してるらしい(未確認))
 
 ```css
-#content { display: flex; }
+#content {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 section {
-  flex: 0.2 0.2 300px;
+  flex: 1 0 300px;
   margin: 10px;
+  padding: 10px;
   border: 1px solid black;
   background-color: lightgrey;
 }
 ```
+
+Safariの方は次のようにしてください。
+
+```css
+#content {
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+}
+
+section {
+  -webkit-flex: 1 0 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: lightgrey;
+}
+```
+
+両ファイルを保存してブラウザで開いてみてください。
+ブラウザの幅を変えてみるとボックスがフレキシブルに配置されるのが確認できます。
+これがflexボックスです。
+
+![](スクリーンショット 2015-09-04 16.36.36.png)
+
+flexボックスは次のようにして使います。
+
+* フレキシブルにする要素を囲む要素に`display: flex`を設定する
+* 囲む要素に`flex-wrap: wrap`をすると、ブラウザ幅が小さくなったときに自動で折り返す
+* フレキシブルにする要素に伸び率、縮み率、基準幅を設定する: `flex: <伸び率> <縮み率> <基準幅>`
+
+flexボックスは最近注目されている技術なので是非flexボックスを使ってレイアウトしてみてください。
 
 ## さまざまなプロパティ
