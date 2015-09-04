@@ -270,7 +270,7 @@ flexボックスを使うと簡単にレスポンシブなレイアウトを実�
 #content { display: flex; }
 
 section {
-  flex: 0.5 0.5 300px;
+  flex: 0.2 0.2 300px;
   margin: 10px;
   border: 1px solid black;
   background-color: lightgrey;
