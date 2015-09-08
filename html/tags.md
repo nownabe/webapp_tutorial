@@ -263,7 +263,7 @@ html
 <table>
   <tr>
     <th>国名</th>
-    <th>首都</ht>
+    <th>首都</th>
     <th>国旗</th>
   </tr>
   <tr>
