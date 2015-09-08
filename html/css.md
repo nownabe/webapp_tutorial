@@ -39,7 +39,7 @@ h2 {
   <head>
     <meta charset="utf-8">
     <title>自己紹介</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     (省略)
