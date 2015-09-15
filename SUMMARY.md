@@ -6,7 +6,7 @@
   * [さまざまなHTMLタグ](html/tags.md)
   * [HTML文書の構造](html/structure_of_html.md)
   * [CSSでデザインする](html/css.md)
-  * [Slim/SCSSで楽をしよう](html/slim_and_scss.md)
+  * [Slimで楽をしよう](html/slim_and_scss.md)
   * [Webページを公開しよう](html/github_pages.md)
 * [SQLでデータベースを操作する](sql/README.md)
 * [Rubyでプログラミングに入門する](ruby/README.md)
