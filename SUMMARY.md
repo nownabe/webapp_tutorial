@@ -8,6 +8,6 @@
   * [CSSでデザインする](html/css.md)
   * [Slimで楽をしよう](html/slim_and_scss.md)
   * [Webページを公開しよう](html/github_pages.md)
-* [SQLでデータベースを操作する](sql/README.md)
 * [Rubyでプログラミングに入門する](ruby/README.md)
+* [SQLでデータベースを操作する](sql/README.md)
 * [SinatraでWebアプリを作る](sinatra/README.md)
