@@ -16,6 +16,7 @@
   * [条件判断](ruby/condition.md)
   * [繰り返し](ruby/loop.md)
   * [メソッド](ruby/method.md)
+  * [ブロック](ruby/block.md)
   * [演算子](ruby/operator.md)
   * [数値](ruby/numeric.md)
   * [文字列](ruby/string.md)
