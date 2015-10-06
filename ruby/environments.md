@@ -2,7 +2,7 @@
 ## 概要
 Rubyを動かすための準備をします。
 
-Mac/LinuxとWindowsで手順が異なります。
+Windows/MacOS/CentOSの手順をそれぞれ紹介します。
 
 ## Windows
 Windowsではインストーラーを使ってRubyをインストールします。
@@ -86,6 +86,48 @@ brew -v
 
 ```bash
 brew install openssl libyaml libffi readline
+```
+
+次にanyenvをインストールします。
+次の一連のコマンドを順に実行してください。(1行1コマンド)
+
+```bash
+git clone https://github.com/riywo/anyenv ~/.anyenv
+echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
+mkdir ~/.anyenv/plugins
+git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
+exec $SHELL -l
+```
+
+次にrbenvをインストールします。
+次のふたつのコマンドを実行してください。
+
+```bash
+anyenv install rbenv
+exec $SHELL -l
+```
+
+最後にRubyをインストールします。
+次のコマンドを実行してください。
+
+```bash
+rbenv install 2.2.3
+rbenv global 2.2.3
+```
+
+次のコマンドでRubyのバージョンが表示されれば成功です！
+
+```bash
+ruby -v
+```
+
+## CentOS
+まずはRubyのインストールに必要なパッケージをインストールします。
+
+```bash
+sudo yum install epel-release
+sudo yum install -y git gcc openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel
 ```
 
 次にanyenvをインストールします。
