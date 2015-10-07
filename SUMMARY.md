@@ -11,6 +11,7 @@
 * [Rubyでプログラミングに入門する](ruby/README.md)
   * [環境準備](ruby/environments.md)
   * [はじめてのRuby](ruby/first_ruby.md)
+  * [irb](ruby/irb.md)
   * [オブジェクト](ruby/object.md)
   * [変数](ruby/variable.md)
   * [条件判断](ruby/condition.md)
