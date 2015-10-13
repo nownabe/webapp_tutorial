@@ -15,7 +15,7 @@
   * [オブジェクト](ruby/object.md)
   * [メソッド](ruby/method.md)
   * [変数](ruby/variable.md)
-  * [条件判断](ruby/condition.md)
+  * [条件分岐](ruby/condition.md)
   * [演算子](ruby/operator.md)
   * [繰り返し](ruby/loop.md)
   * [ブロック](ruby/block.md)
