@@ -13,7 +13,7 @@
   * [はじめてのRuby](ruby/first_ruby.md)
   * [irb](ruby/irb.md)
   * [オブジェクト](ruby/object.md)
-  * [文法](ruby/syntax.md)
+  * [基本文法](ruby/syntax.md)
   * [変数](ruby/variable.md)
   * [メソッド](ruby/method.md)
   * [条件分岐](ruby/condition.md)
