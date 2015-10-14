@@ -23,6 +23,6 @@
   * [文字列](ruby/string.md)
   * [配列](ruby/array.md)
   * [ハッシュ](ruby/hash.md)
-  * [練習問題](ruby/exercise.md)
+  * [演習問題](ruby/exercise.md)
 * [SQLでデータベースを操作する](sql/README.md)
 * [SinatraでWebアプリを作る](sinatra/README.md)
