@@ -179,7 +179,8 @@ hello("Ruby")
 
 ```ruby
 def double(number)
-  return(number * 2)
+  doubled = number * 2
+  return doubled
 end
 
 puts double(10)
@@ -192,7 +193,8 @@ puts double(10)
 
 ```ruby
 def double(number)
-  return(number * 2)
+  doubled = number * 2
+  return doubled
   puts "無視されます"
 end
 ```
