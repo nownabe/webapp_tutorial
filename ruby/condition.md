@@ -247,7 +247,10 @@ if/elsif/else節で例として示した消費税を計算するプログラム�
 case節で例として示したHello, world!を調べるプログラムを、例と同じように作成して実行してください。
 その際、入力した値によって動作が変わることを確かめてください。
 
-### (3) goのHello, world!
+### (3) Go言語のHello, world!
+(2)のHello, worldプログラムにGo言語のHello, world!を追加してください。
+
+GoのHello, world!は次のように書きます。
 
 ```go
 package main
@@ -256,6 +259,8 @@ func main() {
 	fmt.Println("Hello, world!")
 }
 ```
+
+### (4) 
 
 [^1]: 演習問題(2)を参考にしてください。
 [^2]: このような図をフローチャートといいます。
