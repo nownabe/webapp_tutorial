@@ -131,6 +131,132 @@ irb(main):001:0> ARGV[0]
 => nil
 ```
 
+## if/elsif/else
+改めて条件分岐のif文を紹介します。
+if文では`else`を使えば条件が__偽__のときの処理も書くことができます。
+また、`elsif`を使えば2つ目の条件を書くこともできます。
+
+```ruby
+if 条件1
+  処理1
+elsif 条件2
+  処理2
+elsif 条件3
+  処理3
+else
+  処理4
+end
+```
+
+![](ifelse.png)
+
+一番初めの例をif-elseで書くとこうなります。
+
+```ruby
+if ARGV[0].nil?
+  puts "コマンドライン引数に値段を入力してください"
+elsif ARGV[0].to_i <= 0
+  puts "値段は正の整数で入力してください"
+else
+  price = ARGV[0].to_i
+  puts "税抜価格は#{price}円です。"
+  puts "税込価格は#{(price * 1.08).to_i}円です。"
+end
+```
+
+## case
+条件が多い場合、case文を使うとelsifで条件をすべて書くより簡単に書くことができます。
+case文は次のように書きます。
+
+```ruby
+case 比較対象のオブジェクト
+when 値1
+  処理1
+when 値2
+  処理2
+when 値3
+  処理3
+else
+  処理4
+end
+```
+
+`case`の後ろに比較対象のオブジェクトを書き、`when`の後ろに条件となる値を書きます。
+比較対象のオブジェクトと`when`の値が等しければ[^3]そこの処理を実行します。
+どの値とも一致しなかった場合は`else`文が実行されます。
+`else`は省略することもできます。
+
+![](case.png)
+
+例えば入力されたプログラミング言語のHello, world!を調べるプログラムはこんな感じです。
+
+```ruby
+language = ARGV[0]
+
+puts "#{language}のHello, world!は:"
+puts "========"
+
+case language
+when "Ruby"
+  puts "puts \"Hello, world!\""
+when "C"
+  puts "#include <stdio.h>"
+  puts "int main(void) {"
+  puts "  printf(\"Hello, world!\");"
+  puts "}"
+when "Java"
+  puts "class Hello {"
+  puts "  public static void main(String[] args) {"
+  puts "    System.out.println(\"Hello, world!\");"
+  puts "  }"
+  puts "}"
+else
+  puts "わかりません><"
+end
+
+puts "========"
+```
+
+文字列中にダブルクオーテーションをいれるときは、バックスラッシュをつけて`\"`と書きます。
+バックスラッシュがないとダブルクオーテーションが文字列の終わりとして扱われてしまうからです。
+「2.13. 文字列」でまた説明します。
+
+`when`には複数の値を書くこともできます。次の例は入力されたものが寿司ネタか調べるプログラムです。
+
+```ruby
+neta = ARGV[0]
+
+case neta
+when "マグロ", "イカ", "ウニ"
+  puts "#{neta}は最高の寿司になります!!"
+when "卵焼き"
+  puts "子供も大人もウマイ!"
+when "ガリ"
+  puts "ガリは生姜!"
+else
+  puts "ごめんなさい。わかりません><"
+end
+```
+
+## 練習問題
+### (1) 消費税プログラム
+if/elsif/else節で例として示した消費税を計算するプログラムを、例と同じように作成して実行してください。
+その際、入力した値によって動作が変わることを確かめてください。
+
+### (2) Hello, world!プログラム
+case節で例として示したHello, world!を調べるプログラムを、例と同じように作成して実行してください。
+その際、入力した値によって動作が変わることを確かめてください。
+
+### (3) goのHello, world!
+
+```go
+package main
+import "fmt"
+func main() {
+	fmt.Println("Hello, world!")
+}
+```
 
 [^1]: 演習問題(2)を参考にしてください。
 [^2]: このような図をフローチャートといいます。
+[^3]: `when`では`===`というメソッドを使って比較しています。ゆるく等しいかをチェックできるメソッドです。
