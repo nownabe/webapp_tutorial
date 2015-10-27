@@ -323,3 +323,5 @@ irb(main):002:0> "Hello, world!".include?("A")
 
 参考:
 * [String#include?](http://docs.ruby-lang.org/ja/2.2.0/class/String.html#I_INCLUDE--3F)
+
+## (11) 作成中。。。
