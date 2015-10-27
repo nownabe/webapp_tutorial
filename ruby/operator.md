@@ -80,8 +80,8 @@ b *= 3
   <td><code>a</code>と<code>b</code>が等しくない</td>
 </tr>
 <tr>
-  <td>></td>
-  <td>a > b</td>
+  <td><code>></code></td>
+  <td><code>a > b</code></td>
   <td><code>a</code>が<code>b</code>より大きい</td>
 </tr>
 <tr>
