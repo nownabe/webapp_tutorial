@@ -187,3 +187,31 @@ c = 3
 ```
 
 ## 範囲演算子
+`..`と`...`は範囲を表す範囲オブジェクトを生成する演算子です。
+次の2.10 繰り返しでも使います。
+
+```irb
+irb(main):001:0> range = 1..10
+=> 1..10
+irb(main):002:0> range.class
+=> Range
+irb(main):003:0> range.include?(5)
+=> true
+irb(main):004:0> range.include?(15)
+=> false
+```
+
+`..`は末尾のオブジェクトを含み、`...`は含みません。
+
+```irb
+irb(main):001:0> range1 = 1..10
+=> 1..10
+irb(main):002:0> range1.include?(10)
+=> true
+irb(main):003:0> range2 = 1...10
+=> 1...10
+irb(main):004:0> range2.include?(10)
+=> false
+```
+
+## 練習問題
