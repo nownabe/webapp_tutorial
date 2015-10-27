@@ -214,4 +214,15 @@ irb(main):004:0> range2.include?(10)
 => false
 ```
 
+数値オブジェクトだけでなく、文字列オブジェクトからも範囲オブジェクトを生成できます。
+
+```irb
+irb(main):001:0> "aaa".."zzz"
+=> "aaa".."zzz"
+irb(main):002:0> ("aaa".."zzz").include?("xyz")
+=> true
+irb(main):003:0> "あ".."お"
+=> "あ".."お"
+```
+
 ## 練習問題
