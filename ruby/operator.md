@@ -70,9 +70,25 @@ b *= 3
 <table>
 <tr><th>演算子</th><th>例</th><th>真を返す条件</th></tr>
 <tr>
-  <td><pre><code>></code></pre></td>
-  <td><pre><code>a > b</pre></code></td>
-  <td><pre><code>a</pre></code>が<pre><code>b</pre></code>より大きい</td></tr>
+  <td>></td>
+  <td>a > b</td>
+  <td><code>a</code>が<code>b</code>より大きい</td>
+</tr>
+<tr>
+  <td><pre><code><</code></pre></td>
+  <td><pre><code>a < b</pre></code></td>
+  <td><pre><code>a</pre></code>が<pre><code>b</pre></code>より小さい</td>
+</tr>
+<tr>
+  <td><pre><code>>=</code></pre></td>
+  <td><pre><code>a >= b</pre></code></td>
+  <td><pre><code>a</pre></code>が<pre><code>b</pre></code>以上</td>
+</tr>
+<tr>
+  <td><pre><code><=</code></pre></td>
+  <td><pre><code>a <= b</pre></code></td>
+  <td><pre><code>a</pre></code>が<pre><code>b</pre></code>以下</td>
+</tr>
 </table>
 
 ## 論理演算子
