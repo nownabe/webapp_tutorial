@@ -80,23 +80,23 @@ b *= 3
   <td><code>a</code>と<code>b</code>が等しくない</td>
 </tr>
 <tr>
-  <td><code>></code></td>
-  <td><code>a > b</code></td>
+  <td><code>&gt;</code></td>
+  <td><code>a &gt; b</code></td>
   <td><code>a</code>が<code>b</code>より大きい</td>
 </tr>
 <tr>
-  <td><code><</code></td>
-  <td><code>a < b</code></td>
+  <td><code>&lt;</code></td>
+  <td><code>a &lt; b</code></td>
   <td><code>a</code>が<code>b</code>より小さい</td>
 </tr>
 <tr>
-  <td><code>>=</code></td>
-  <td><code>a >= b</code></td>
+  <td><code>&gt;=</code></td>
+  <td><code>a &gt;= b</code></td>
   <td><code>a</code>が<code>b</code>以上</td>
 </tr>
 <tr>
-  <td><code><=</code></td>
-  <td><code>a <= b</code></td>
+  <td><code>&lt;=</code></td>
+  <td><code>a &lt;= b</code></td>
   <td><code>a</code>が<code>b</code>以下</td>
 </tr>
 </table>
