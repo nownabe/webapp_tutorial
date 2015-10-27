@@ -62,13 +62,13 @@ b *= 3
 このように、`演算子=`とすると左辺の変数のオブジェクト自身に演算を行い、その結果を再び左辺の変数に代入します。
 
 ## 比較演算子
-オブジェクトの比較を行い、真偽値を返す演算子です。
+オブジェクトの比較を行い、true/falseを返す演算子です。
 主に条件分岐の条件として使います。
 
 以下の比較演算子があります。
 
 <table>
-<tr><th>演算子</th><th>例</th><th>真を返す条件</th></tr>
+<tr><th>演算子</th><th>例</th><th><code>true</code>を返す条件</th></tr>
 <tr>
   <td><code>==</code></td>
   <td><code>a == b</code></td>
@@ -101,5 +101,89 @@ b *= 3
 </tr>
 </table>
 
+次のように実行すると真偽値を返します。
+
+```irb
+irb(main):001:0> a = 1
+=> 1
+irb(main):002:0> b = 1
+=> 1
+irb(main):003:0> a == b
+=> true
+irb(main):004:0> if a == b
+irb(main):005:1>   puts "等しい！"
+irb(main):006:1> end
+等しい！
+=> nil
+irb(main):007:0> if a != b
+irb(main):008:1>   puts "等しくない！"
+irb(main):009:1> end
+=> nil
+```
+
 ## 論理演算子
+論理演算子を使うことで、複数の条件を組合せることができます。
+
+論理演算子には以下のものがあります。
+
+<table>
+<tr><th>演算子</th><th>例</th><th>真となる条件</th><th>説明</th></tr>
+<tr>
+  <td><code>&&</code></td>
+  <td><code>A && B</code></td>
+  <td><code>A</code>も<code>B</code>も真</td>
+  <td>AかつBが真のとき、真となります</td>
+</tr>
+<tr>
+  <td><code>||</code></td>
+  <td><code>a || b</code></td>
+  <td><code>A</code>または<code>B</code>が真</td>
+  <tr>AまたはBのどちらかが真のとき、真となります</td>
+</tr>
+<tr>
+  <td><code>!</code></td>
+  <td><code>!A</code></td>
+  <td><code>A</code>が偽</td>
+  <td>真偽値を反転させます</td>
+</tr>
+</table>
+
+次のように使います。
+
+```irb
+irb(main):001:0> a = 1
+=> 1
+irb(main):002:0> b = 2
+=> 2
+irb(main):003:0> if a == 1 && b == 2
+irb(main):004:1>   puts "aは1かつbは2"
+irb(main):005:1> end
+aは1かつbは2
+=> nil
+irb(main):006:0> if !(a == 1)
+irb(main):007:1>   puts "aは1でない"
+irb(main):008:1> end
+=> nil
+```
+
+組合せることで複雑な条件も表現できます。
+
+```
+irb(main):001:0> a, b, c = 1, 2, 3
+=> [1, 2, 3]
+irb(main):002:0> if !(a == 5) && (b == 2 || c == 2)
+irb(main):003:1>   puts "aは5でない、かつ、bまたはcが2"
+irb(main):004:1> end
+aは5でない、かつ、bまたはcが2
+=> nil
+```
+
+1行目は、次と同じ意味です。
+
+```ruby
+a = 1
+b = 2
+c = 3
+```
+
 ## 範囲演算子
