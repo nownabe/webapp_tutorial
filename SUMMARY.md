@@ -19,7 +19,6 @@
   * [条件分岐](ruby/condition.md)
   * [演算子](ruby/operator.md)
   * [繰り返し](ruby/loop.md)
-  * [ブロック](ruby/block.md)
   * [数値](ruby/numeric.md)
   * [文字列](ruby/string.md)
   * [配列](ruby/array.md)
