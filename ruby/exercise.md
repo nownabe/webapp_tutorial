@@ -209,6 +209,10 @@ EOSはEnd Of Stringの略です。
 <p>少しわかりにくいかもしれませんが、複数行に渡る長い文字列を扱うときには非常に便利です。</p>
 ```
 
+参考:
+
+* [ヒアドキュメント](http://docs.ruby-lang.org/ja/2.2.0/doc/spec=2fliteral.html#here)
+
 ## (8) ファイル表示++
 __(2.8 条件分岐)__
 
@@ -225,6 +229,10 @@ irb(main):001:0> File.exist?("sample1.txt")
 irb(main):002:0> File.exist?("sample2.txt")
 => false
 ```
+
+参考:
+
+* [File.exist?](http://docs.ruby-lang.org/ja/2.2.0/class/File.html#S_EXIST--3F)
 
 ## (9) 行数表示
 __(2.10 繰り返し)__
@@ -279,6 +287,12 @@ end
 
 `文字列.lines`で行の配列が返ります。そして、その配列に`each`で繰り返し処理をしています。
 
+参考:
+
+* [String#lines](http://docs.ruby-lang.org/ja/2.2.0/class/String.html#I_LINES)
+* [Array#each](http://docs.ruby-lang.org/ja/2.2.0/class/Array.html#I_EACH)
+* [Array#each_with_index](http://docs.ruby-lang.org/ja/2.2.0/class/Enumerable.html#I_EACH_WITH_INDEX)
+
 ## (10) ヘッダの抽出
 __(2.10 繰り返し)__
 
@@ -306,3 +320,6 @@ irb(main):001:0> "Hello, world!".include?("H")
 irb(main):002:0> "Hello, world!".include?("A")
 => false
 ```
+
+参考:
+* [String#include?](http://docs.ruby-lang.org/ja/2.2.0/class/String.html#I_INCLUDE--3F)
