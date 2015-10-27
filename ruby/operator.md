@@ -137,9 +137,9 @@ irb(main):009:1> end
 </tr>
 <tr>
   <td><code>||</code></td>
-  <td><code>a || b</code></td>
+  <td><code>A || B</code></td>
   <td><code>A</code>または<code>B</code>が真</td>
-  <tr>AまたはBのどちらかが真のとき、真となります</td>
+  <td>AまたはBのどちらかが真のとき、真となります</td>
 </tr>
 <tr>
   <td><code>!</code></td>
