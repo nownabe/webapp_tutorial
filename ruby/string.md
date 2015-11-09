@@ -280,7 +280,7 @@ HHeelllloo,,  wwoorrlldd!!
 ```bash
 $ ruby join_string.rb
 何か入力してください > Hello, world!
-H-e-l-l-o-,- -w-o-r-l-d-!
+H=e=l=l=o=,= =w=o=r=l=d=!
 ```
 
 ### (3) 置換
