@@ -324,4 +324,69 @@ irb(main):002:0> "Hello, world!".include?("A")
 参考:
 * [String#include?](http://docs.ruby-lang.org/ja/2.2.0/class/String.html#I_INCLUDE--3F)
 
-## (11) 作成中。。。
+## (11) じゃんけん
+__(2.10 繰り返し)__
+
+下図のようなユーザとじゃんけんをするプログラムを作成してください。
+
+![](スクリーンショット 2015-11-09 19.54.37.png)
+
+コンピュータの手を決めるのは`rand`メソッドを使用してください。
+`rand(N)`でNより小さいランダムな整数が返ります。
+
+```irb
+>> rand(3)
+=> 1
+>> rand(3)
+=> 0
+>> rand(3)
+=> 1
+>> rand(3)
+=> 1
+>> rand(3)
+=> 0
+>> rand(3)
+=> 2
+```
+
+次のプログラムを埋めると実現することができます。
+
+```ruby
+# じゃんけんの手と数字の対応:
+#   0 = グー
+#   1 = チョキ
+#   2 = パー
+
+def convert(number)
+  case number
+  when 0
+    "グー"
+  when 1
+    "チョキ"
+  when 2
+    "パー"
+  end
+end
+
+puts "じゃんけんしましょう！"
+puts "出したい手と対応する数字をにゅうりょくしてください。"
+puts "(9を入力すると終了します)"
+
+loop do
+  print "\n何を出しますか？(グー: 0, チョキ: 1, パー: 2) > "
+  user = gets.chomp.to_i
+
+  # ユーザの入力が9なら終了する処理
+
+  # コンピュータの手をrandで決める
+  # (cpu変数に代入する)
+
+  puts "#{convert(user)}ですね！コンピュータは#{convert(cpu)}です！"
+
+  if user == cpu
+    puts "あいこで〜〜"
+  elsif # 勝ち負けの条件
+    # 勝ち負けの出力
+  end
+end
+```
