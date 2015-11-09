@@ -376,17 +376,17 @@ loop do
   print "\n何を出しますか？(グー: 0, チョキ: 1, パー: 2) > "
   user = gets.chomp.to_i
 
-  # ユーザの入力が9なら終了する処理
+  # 処理: ユーザの入力が9なら終了する
 
-  # コンピュータの手をrandで決める
+  # 処理: コンピュータの手をrandで決める
   # (cpu変数に代入する)
 
   puts "#{convert(user)}ですね！コンピュータは#{convert(cpu)}です！"
 
   if user == cpu
     puts "あいこで〜〜"
-  elsif # 勝ち負けの条件
-    # 勝ち負けの出力
+  elsif # 条件: 勝ち負けの条件
+    # 処理: 勝ち負けの出力
   end
 end
 ```
