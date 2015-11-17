@@ -86,6 +86,12 @@ greetings = {
 greetings[:english] #=> "hello"
 ```
 
+空の配列を作るには、`{}`だけを書けばOKです。
+
+```ruby
+empty_hash = {}
+```
+
 ## ハッシュの基本操作
 ハッシュの基本的な次の操作を説明します。
 
