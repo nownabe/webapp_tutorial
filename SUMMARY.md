@@ -24,6 +24,6 @@
   * [配列](ruby/array.md)
   * [ハッシュ](ruby/hash.md)
   * [演習問題](ruby/exercise.md)
-  * [おまけ: Gmail from Ruby](ruby/gmail.md)
+  * [おまけ: Gmail with Ruby](ruby/gmail.md)
 * [SQLでデータベースを操作する](sql/README.md)
 * [SinatraでWebアプリを作る](sinatra/README.md)
