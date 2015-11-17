@@ -186,3 +186,56 @@ greetings.size #=> 3
 greetings.delete(:chinese)
 greetings.size #=> 2
 ```
+
+## ハッシュの繰り返し操作
+ハッシュも配列と同じように、各ペアに対して繰り返し処理を行うことができます。
+
+* キー・バリューペアの繰り返し
+* キーの繰り返し
+* バリューの繰り返し
+
+### キー・バリューペアの繰り返し
+配列と同じように`each`メソッドを使います。
+ブロック変数にはキーとバリューが代入され、それぞれのペアに対してブロックの処理が実行されます。
+
+```ruby
+greetings #=> {:japanese=>"こんにちは", :english=>"hello", :chinese=>"你好"}
+
+greetings.each do |key, value|
+  puts "#{key}での挨拶は「#{value}」です。"
+end
+
+#=>
+# japaneseでの挨拶は「こんにちは」です。
+# englishでの挨拶は「hello」です。
+# chineseでの挨拶は「你好」です。
+```
+
+### キーの繰り返し
+キーだけを繰り返し処理するには`each_key`を使います。
+
+```ruby
+greetings #=> {:japanese=>"こんにちは", :english=>"hello", :chinese=>"你好"}
+
+# すべてのキーを大文字にして出力する
+greetings.each_key { |key| puts key.upcase }
+
+#=>
+# JAPANESE
+# ENGLISH
+# CHINESE
+```
+
+### バリューの繰り返し
+バリューだけを繰り返し処理するには`each_value`を使います。
+
+```ruby
+greetings #=> {:japanese=>"こんにちは", :english=>"hello", :chinese=>"你好"}
+
+greetings.each_value { |value| puts "#{value}はどこの国？" }
+
+#=>
+# こんにちははどこの国？
+# helloはどこの国？
+# 你好はどこの国？
+```
