@@ -136,7 +136,7 @@ $ ruby exit.rb
 処理を中断します。
 ```
 
-# RubyでHTMLを生成する
+## RubyでHTMLを生成する
 メールを美しく表示させるため日報をHTMLメールとして送信します。
 そのため、ユーザが入力した内容からHTMLを生成する必要があります。
 
@@ -224,7 +224,94 @@ puts html
 => "2015年11月20日"
 ```
 
-# Gmailでメールを送信する
+## Gmailでメールを送信する
+ではいよいよGmailを使ってメールを送信してみましょう！
+
+### アプリパスワード取得
+2段階認証を設定している方はまずプログラム専用のアプリパスワードというものが必要になります。
+こちらのページにアクセスしてください。
+https://security.google.com/settings/security/apppasswords
+
+「端末を選択」のところで「その他 (名前を入力)」を選択して「Ruby(日報メール)」と入力してください。
+
+次に【生成】ボタンをクリックするとパスワードが表示されるので、それをメモしておいてください。
+
+### ruby-gmailインストール
+Gmailを使うために、ruby-gmailというライブラリをインストールする必要があります。
+これはRubyGemsというパッケージ形式で配布されていて、次のコマンドでインストールすることができます。
+
+```bash
+gem install ruby-gmail
+```
+
+### メールの送信方法
+次のようなプログラムでメールを送信することができます。
+
+```ruby
+# ruby-gmailライブラリを読み込む
+require "gmail"
+
+# Gmailクラスのオブジェクトを作る
+# (ログインする)
+gmail = Gmail.new("Gmailのメールアドレス", "Gmailのパスワード")
+
+# メールを書く
+message = gmail.generate_message do
+  to("宛先のメールアドレス")
+  subject("メールのタイトル")
+  html_part do
+    content_type("text/html; charset=UTF-8")
+    body("メールの本文(HTML)")
+  end
+end
+
+# メールを送信する
+gmail.deliver(message)
+
+# ログアウトする
+gmail.logout
+```
+
+### メールを送信してみる
+では実際に次のプログラムを参考にして、メールを送信してみてください。
+
+```ruby
+# Gmailのログイン情報の設定
+USERNAME = "自分のGmailのメールアドレス"
+PASSWORD = "自分のGmailのパスワード" # 2段階認証の場合は取得したアプリパスワード
+
+# 宛先のメールアドレス (複数指定可能)
+TO = [
+  "atesaki1@example.com",
+  "atesaki2@example.com"
+]
+
+# ruby-gmailライブラリを読み込む
+require "gmail"
+
+# Gmailクラスのインスタンスを作る
+gmail = Gmail.new(USERNAME, PASSWORD)
+
+# メールを書く
+message = gmail.generate_message do
+  to(TO)
+  subject("Rubyからのメール！！")
+  html_part do
+    content_type("text/html; charset=UTF-8")
+    body("<h3>届いてる〜〜?</h3>")
+  end
+end
+
+# メールを送信する
+gmail.deliver(message)
+
+# ログアウトする
+gmail.logout
+```
+
+`USERNAME`などの全て大文字の変数は、__定数__と呼ばれる特別な変数です。
+プログラム中で再代入することができないので、プログラムの設定に使ったりします。
+(厳密にいうと再代入もできます)
 
 ## 全ソースコード
 日報メールプログラムを実現するソースコードです。
