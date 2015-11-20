@@ -193,12 +193,26 @@ html.concat "<h2>日報 #{date} nownabe</h2>"
 
 html.concat "<h3>本日の業務</h3>"
 html.concat "<ul>"
-todays_tasks.each do |task|
+today_tasks.each do |task|
   html.concat "<li>#{task}</li>"
 end
 html.concat "</ul>"
 
-# 以下省略
+html.concat "<h3>翌日の業務</h3>"
+html.concat "<ul>"
+tomorrow_tasks.each do |task|
+  html.concat "<li>#{task}</li>"
+end
+html.concat "</ul>"
+
+html.concat "<h3>所感</h3>"
+html.concat "<ul>"
+impressions.each do |impression|
+  html.concat "<li>#{impression}</li>"
+end
+html.concat "</ul>"
+
+puts html
 ```
 
 `Time`クラスの`strftime`メソッドは、時刻から指定されたフォーマットの文字列を生成します。
