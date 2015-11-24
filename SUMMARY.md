@@ -32,7 +32,7 @@
   * [SQLite基本操作](sql/sqlite.md)
   * [はじめてのSQL](sql/first_sql.md)
   * [RubyでSQL](sql/ruby.md)
-  * [テーブル作成](sql/table.md)
+  * [テーブル](sql/table.md)
   * [データの検索](sql/select.md)
   * [データの更新](sql/update.md)
   * [正規化](sql/normalization.md)
