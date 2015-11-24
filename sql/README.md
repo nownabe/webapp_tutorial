@@ -3,5 +3,5 @@
 RDBMSにはSQLiteを使用します。
 
 * SQLによる基本操作
+* RubyからのSQL
 * Webアプリを作る上で必要な正規化
-* Rubyからの
