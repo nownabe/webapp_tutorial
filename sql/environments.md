@@ -4,6 +4,22 @@
 Windows/MacOS/CentOSの手順をそれぞれ紹介します。
 
 ## Windows
+### DevKitのインストール
+まずDevKitというものをインストールする必要があります。
+[ダウンロードページ](http://rubyinstaller.org/downloads)にアクセスしてください。
+「DEVELOPMENT KIT」の下の「For use with Ruby 2.0 and above」のうち、32-bitか64-bitの自分のPCにあうものをダウンロードしてください。
+
+### DLLのインストール
+SQLiteの[ダウンロードページ](http://www.sqlite.org/download.html)にアクセスして「Precompiled Binaries for Windows」の中からDLLをダウンロードして下さい。
+(32-bitか64-bitは自分のPCにあう方を選んでください)
+
+
+
+### コマンドラインプログラムのインストール
+SQLiteの[ダウンロードページ](http://www.sqlite.org/download.html)にアクセスして「Precompiled Binaries for Windows」の中から「sqlite-shell-win32-x86-****.zip」をダウンロードしてください。
+
+
+
 
 ## Mac
 Macは最初からSQLiteがインストールされているので、インストール不要です。
